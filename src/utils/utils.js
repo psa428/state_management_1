@@ -1,4 +1,4 @@
-export function gameOver (fld, setIsDraw){
+export function gameOver (fld){
     /*********************************************************
      *  Игра окончена?
      *  Если да, вернем победителя
@@ -14,7 +14,7 @@ export function gameOver (fld, setIsDraw){
         res = tmpFull.every((element) => (element === 'X' || element === '0'));
       
       if (res) {
-        setIsDraw(true);
+        // setIsDraw(true);
         return 'Ничья';
       };  
 

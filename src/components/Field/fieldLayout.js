@@ -1,12 +1,15 @@
 import '../App.css';
 import PropTypes from 'prop-types';
+import { store } from '../../store';
 
 export function FieldLayout({arry, onClickCl})  {
+
+    const { field } = store.getState();
      
     return (
         <table>
             {
-                arry.map((row, i) => (
+                field.map((row, i) => (
                     <tr className='table-row' key={i} id_row={i}>
                         {
                             row.map((ceil, j) => (

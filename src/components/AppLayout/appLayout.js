@@ -4,12 +4,14 @@ import { Field } from '../Field/field';
 
 
 
-export function AppLayout({player, gameState, draw, fld, onClickCeil, onClickBtn}) {
+export function AppLayout({onClickCeil, onClickBtn}) {
     
     return (
         <>
-        <Information plr={player} gameSt={gameState} drw={draw}/> 
-        <Field arr={fld} onClickCl={onClickCeil}/> 
+        {/* <Information plr={player} gameSt={gameState} drw={draw}/> 
+        <Field arr={fld} onClickCl={onClickCeil}/>  */}
+        <Information /> 
+        <Field onClickCl={onClickCeil}/> 
          <button className="btn" onClick={onClickBtn} >Новая игра</button> 
         </>
     );  

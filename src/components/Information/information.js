@@ -1,16 +1,21 @@
 import { InformationLayout } from "./informationLayout";
 import PropTypes from 'prop-types';
-export function Information({plr, gameSt, drw}) {
+import { store } from "../../store";
+
+
+export function Information() {
+
+    const { isDraw, isGameEnded, currentPlayer } = store.getState();
      
     
     let message;
-    if (drw)
+    if (isDraw)
             message = 'Ничья';
-    else if (gameSt) 
-        message = 'Победа ' + plr;   
+    else if (isGameEnded) 
+        message = 'Победа ' + currentPlayer;   
         
     else
-        message = "Играет " + plr;
+        message = "Играет " + currentPlayer;
 
     return (
         <div className="information" >

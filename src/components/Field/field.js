@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 import '../App.css';
 
 
-export function Field({arr, onClickCl }) {
+export function Field({onClickCl }) {
     
     return (
         <div className="table-box">
             
-                <FieldLayout arry={arr} onClickCl={onClickCl}/> 
+                <FieldLayout  onClickCl={onClickCl}/> 
             
         </div>
     );
